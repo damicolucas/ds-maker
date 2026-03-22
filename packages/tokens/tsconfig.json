@@ -1,0 +1,10 @@
+{
+  "extends": "@dsbuilder/typescript-config/library.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "lib": ["ES2020", "dom"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

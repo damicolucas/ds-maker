@@ -1,0 +1,32 @@
+{
+  "name": "@dsbuilder/cli",
+  "version": "0.0.0",
+  "description": "CLI tool for DS Builder — init, build, and sync design tokens",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "dsbuilder": "./dist/index.js"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@dsbuilder/tokens": "workspace:*",
+    "@clack/prompts": "^0.9.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@dsbuilder/typescript-config": "workspace:*",
+    "@dsbuilder/eslint-config": "workspace:*",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3"
+  }
+}

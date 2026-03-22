@@ -1,0 +1,201 @@
+.panel {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ── Group nav ────────────────────────────────────────────────────────── */
+
+.groupNav {
+  border-right: 1px solid var(--border);
+  padding: 20px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  overflow-y: auto;
+}
+
+.groupNavLabel {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 600;
+  padding: 0 8px;
+  margin-bottom: 8px;
+}
+
+.groupNavItem {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 6px 8px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  font-family: inherit;
+}
+
+.groupNavItem:hover {
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+.groupNavActive {
+  background: var(--accent-green-dim) !important;
+  color: var(--accent-green) !important;
+}
+
+/* ── Content ──────────────────────────────────────────────────────────── */
+
+.content {
+  padding: 28px 40px;
+  overflow-y: auto;
+}
+
+.contentHeader {
+  margin-bottom: 16px;
+}
+
+.contentTitle {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.columnLabels {
+  display: grid;
+  grid-template-columns: 1fr 200px 200px;
+  gap: 12px;
+  padding: 0 12px;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+/* ── Token rows ───────────────────────────────────────────────────────── */
+
+.tokenRows {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.semanticRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.15s;
+}
+
+.semanticRow:hover {
+  border-color: var(--border-accent);
+}
+
+.rowLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.rowPreview {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.rowInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.rowName {
+  font-size: 12.5px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.rowDesc {
+  font-size: 11px;
+  color: var(--text-dim);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Pickers ──────────────────────────────────────────────────────────── */
+
+.rowPickers {
+  display: flex;
+  gap: 8px;
+}
+
+.pickerGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.pickerLabel {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+.pickerWrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pickerDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.pickerSelect {
+  height: 28px;
+  padding: 0 6px;
+  font-size: 11px;
+  font-family: inherit;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  cursor: pointer;
+  outline: none;
+  min-width: 140px;
+  max-width: 180px;
+}
+
+.pickerSelect:hover {
+  border-color: var(--border-accent);
+  color: var(--text);
+}
+
+.pickerSelect:focus {
+  border-color: var(--accent-green);
+}
